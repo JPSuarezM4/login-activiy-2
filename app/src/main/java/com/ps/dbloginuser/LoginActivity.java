@@ -1,5 +1,6 @@
 package com.ps.dbloginuser;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
 
+
         dbHelper = new DatabaseHelper(this);
 
 
@@ -33,9 +35,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
-
-                // Verifica las credenciales en la base de datos SQLite
-                if (checkCredentials(email, password)) {
+                    // Verifica las credenciales en La base de datos SQLite
+                if (checkCredentials (email, password)) {
                     Intent intent = new Intent(LoginActivity.this, MenuUsuarioActivity.class);
                     startActivity(intent);
                     finish();

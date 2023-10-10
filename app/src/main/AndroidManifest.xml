@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ps.dbloginuser">
+    package="com.ps.dbloginuser"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="31" />
 
     <!-- Definición de actividades -->
 
@@ -8,7 +14,7 @@
     <activity
         android:name=".SplashActivity"
         android:label="My App Splash"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -19,14 +25,14 @@
     <activity
         android:name=".LoginActivity"
         android:label="Login"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar" >
     </activity>
 
     <!-- Actividad del menú de usuario - MenuUsuarioActivity -->
     <activity
         android:name=".MenuUsuarioActivity"
         android:label="Menú de Usuario"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar" >
     </activity>
 
     <!-- Otras configuraciones y permisos -->
